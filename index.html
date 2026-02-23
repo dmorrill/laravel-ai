@@ -166,8 +166,64 @@
         </div>
     </section>
 
-    <!-- Laravel Cloud -->
+    <!-- AI Ecosystem -->
     <section class="py-20">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4">The Laravel AI ecosystem</h2>
+            <p class="text-gray-500 text-center mb-14 max-w-2xl mx-auto">Laravel doesn't just work with AI — it has first-party tools designed for it.</p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-8 border hover:shadow-md transition">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-purple-50 rounded-lg flex items-center justify-center">
+                            <span class="text-purple-600 text-lg">⚡</span>
+                        </div>
+                        <h3 class="font-bold text-lg">Laravel Boost</h3>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">AI guidelines and agent skills that help Claude Code, Cursor, and Codex write idiomatic Laravel. Includes an MCP server with 17,000+ pieces of Laravel-specific knowledge and semantic search.</p>
+                    <div class="code-block rounded-lg p-3 mb-4">
+                        <code class="text-green-400 font-mono text-xs">composer require laravel/boost --dev</code>
+                    </div>
+                    <a href="https://laravel.com/docs/12.x/boost" class="text-[#FF2D20] text-sm font-medium hover:underline">Documentation →</a>
+                </div>
+
+                <div class="bg-white rounded-xl p-8 border hover:shadow-md transition">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center">
+                            <span class="text-blue-600 text-lg">🧠</span>
+                        </div>
+                        <h3 class="font-bold text-lg">Prism (AI SDK)</h3>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">A unified interface for working with LLMs in your Laravel app. Connect to OpenAI, Anthropic, Ollama, and more with one consistent API. Build AI-powered features right into your product.</p>
+                    <div class="code-block rounded-lg p-3 mb-4">
+                        <code class="text-green-400 font-mono text-xs">composer require prism-php/prism</code>
+                    </div>
+                    <a href="https://github.com/prism-php/prism" class="text-[#FF2D20] text-sm font-medium hover:underline">GitHub (2.3k ⭐) →</a>
+                </div>
+
+                <div class="bg-white rounded-xl p-8 border hover:shadow-md transition">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center">
+                            <span class="text-green-600 text-lg">🔌</span>
+                        </div>
+                        <h3 class="font-bold text-lg">MCP Server</h3>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Model Context Protocol support built into Boost. Your AI agent can query Laravel docs, understand your app's structure, and follow best practices — all through a local MCP server.</p>
+                    <div class="code-block rounded-lg p-3 mb-4">
+                        <code class="text-green-400 font-mono text-xs">php artisan boost:install</code>
+                    </div>
+                    <a href="https://laravel.com/docs/12.x/boost#mcp-server" class="text-[#FF2D20] text-sm font-medium hover:underline">Documentation →</a>
+                </div>
+            </div>
+
+            <div class="mt-10 bg-gray-50 rounded-xl p-6 border text-center">
+                <p class="text-gray-600 text-sm"><strong>Together:</strong> Boost teaches your AI agent how to write Laravel. Prism lets your app talk to AI models. MCP connects it all. And Laravel Cloud deploys it with one command.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Laravel Cloud -->
+    <section class="bg-gray-50 py-20">
         <div class="max-w-5xl mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-4">Build it. Ship it. Done.</h2>
             <p class="text-gray-500 text-center mb-14 max-w-2xl mx-auto">Laravel isn't just a framework — it's the full journey from idea to production. Build locally with AI, deploy to Laravel Cloud with one command.</p>
