@@ -133,8 +133,13 @@
                         <p class="text-gray-400">- Use artisan make commands for scaffolding</p>
                     </div>
 
-                    <p class="text-gray-500 mt-4"># Step 3: Ship it</p>
+                    <p class="text-gray-500 mt-4"># Step 3: Test locally</p>
                     <p class="text-gray-400">~ $ <span class="text-green-400">php artisan serve</span></p>
+                    <p class="text-gray-500 text-xs ml-4 mb-4">Open localhost:8000 — your app is running</p>
+
+                    <p class="text-gray-500"># Step 4: Deploy to Laravel Cloud</p>
+                    <p class="text-gray-400">~ $ <span class="text-green-400">cloud deploy</span></p>
+                    <p class="text-gray-500 text-xs ml-4">Live on the internet. Database, SSL, CDN — all handled.</p>
                 </div>
             </div>
         </div>
@@ -161,11 +166,57 @@
         </div>
     </section>
 
-    <!-- CTA -->
+    <!-- Laravel Cloud -->
     <section class="py-20">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4">Build it. Ship it. Done.</h2>
+            <p class="text-gray-500 text-center mb-14 max-w-2xl mx-auto">Laravel isn't just a framework — it's the full journey from idea to production. Build locally with AI, deploy to Laravel Cloud with one command.</p>
+
+            <div class="grid md:grid-cols-4 gap-4">
+                <div class="text-center p-6">
+                    <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-[#FF2D20] font-bold text-lg">1</span>
+                    </div>
+                    <h3 class="font-bold mb-2">Create</h3>
+                    <p class="text-gray-500 text-sm"><code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">laravel new</code><br>Full app scaffold in seconds</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-[#FF2D20] font-bold text-lg">2</span>
+                    </div>
+                    <h3 class="font-bold mb-2">Build with AI</h3>
+                    <p class="text-gray-500 text-sm">Describe features to Claude Code. Laravel's conventions do the rest.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-[#FF2D20] font-bold text-lg">3</span>
+                    </div>
+                    <h3 class="font-bold mb-2">Deploy</h3>
+                    <p class="text-gray-500 text-sm"><code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">cloud deploy</code><br>Database, SSL, CDN — handled.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-[#FF2D20] font-bold text-lg">4</span>
+                    </div>
+                    <h3 class="font-bold mb-2">Scale</h3>
+                    <p class="text-gray-500 text-sm">Auto-scaling, zero-downtime deploys, managed infrastructure.</p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-gray-500 mb-4">No Docker. No AWS console. No DevOps team. Just your code and one command.</p>
+                <a href="https://cloud.laravel.com" class="inline-flex items-center px-6 py-3 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-700 transition">
+                    Explore Laravel Cloud →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-gray-50 py-20">
         <div class="max-w-3xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-4">Start building in 60 seconds</h2>
-            <p class="text-xl text-gray-500 mb-8">Install Laravel, describe what you want, and let AI do the rest.</p>
+            <h2 class="text-4xl font-bold mb-4">From idea to production in an afternoon</h2>
+            <p class="text-xl text-gray-500 mb-8">Create with Laravel. Build with AI. Deploy to Laravel Cloud.</p>
             <div class="code-block rounded-xl p-4 inline-block mb-8">
                 <code class="text-green-400 font-mono">composer global require laravel/installer && laravel new myapp</code>
             </div>
