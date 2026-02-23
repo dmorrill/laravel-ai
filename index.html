@@ -282,7 +282,25 @@
                 </div>
             </div>
 
-            <div class="mt-12 text-center">
+            <div class="mt-12 bg-white border rounded-xl p-8">
+                <div class="flex flex-col md:flex-row md:items-center gap-6">
+                    <div class="flex-1">
+                        <h3 class="font-bold text-lg mb-2">Your AI agent can deploy to Cloud too</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-3">The Laravel Cloud API is now available to AI agents. Say "deploy to production" in a conversation and it happens — no dashboard, no context-switching. Applications, environments, databases, scaling, domains — all 19 resource categories, accessible through chat.</p>
+                        <a href="https://laravel.com/blog/your-ai-agent-can-now-deploy-to-laravel-cloud" class="text-[#FF2D20] text-sm font-medium hover:underline">Read the full story →</a>
+                    </div>
+                    <div class="code-block rounded-lg p-4 md:w-80 flex-shrink-0">
+                        <div class="font-mono text-xs leading-relaxed">
+                            <p class="text-gray-400">You: <span class="text-white">"Deploy to production"</span></p>
+                            <p class="text-gray-500 mt-2">Agent runs:</p>
+                            <p class="text-green-400">laravel-cloud deploy env-a3f...</p>
+                            <p class="text-green-400 mt-2">✓ Deployed successfully</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
                 <p class="text-gray-500 mb-4">No Docker. No AWS console. No DevOps team. Just your code and one command.</p>
                 <a href="https://cloud.laravel.com" class="inline-flex items-center px-6 py-3 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-700 transition">
                     Explore Laravel Cloud →
