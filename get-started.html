@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started with Laravel Cloud — From Zero to Production</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text { background: linear-gradient(135deg, #FF2D20, #FF6F61); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .code-block { background: #1a1a2e; }
+        .step-line { position: absolute; left: 23px; top: 48px; bottom: 0; width: 2px; background: #e5e7eb; }
+        .step-active .step-line { background: linear-gradient(180deg, #FF2D20, #e5e7eb); }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- Nav -->
+    <nav class="border-b">
+        <div class="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between">
+            <a href="index.html" class="text-sm text-gray-500 hover:text-gray-900">← Back to Laravel + AI</a>
+            <a href="https://cloud.laravel.com" class="inline-flex items-center px-4 py-1.5 bg-[#FF2D20] text-white text-sm font-medium rounded-md hover:bg-red-600 transition">
+                Open Laravel Cloud
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="max-w-4xl mx-auto px-6 pt-16 pb-12">
+        <div class="inline-block px-3 py-1 bg-red-50 text-red-600 text-xs font-medium rounded-full mb-4">
+            Complete guide — 15 minutes
+        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">
+            From zero to production<br>
+            <span class="gradient-text">in one sitting.</span>
+        </h1>
+        <p class="text-lg text-gray-500 max-w-2xl leading-relaxed">
+            Create a Laravel app, build features with AI, and deploy to Laravel Cloud. No servers to configure, no DevOps required. Just your idea and these six steps.
+        </p>
+    </section>
+
+    <!-- Prerequisites -->
+    <section class="max-w-4xl mx-auto px-6 pb-12">
+        <div class="bg-gray-50 rounded-xl p-6 border">
+            <h2 class="font-bold text-sm uppercase tracking-wider text-gray-400 mb-3">Before you start</h2>
+            <div class="grid sm:grid-cols-3 gap-4 text-sm">
+                <div class="flex items-start gap-2">
+                    <span class="text-green-500 mt-0.5">✓</span>
+                    <div>
+                        <div class="font-medium">PHP & Composer</div>
+                        <div class="text-gray-500">The Laravel installer handles this</div>
+                    </div>
+                </div>
+                <div class="flex items-start gap-2">
+                    <span class="text-green-500 mt-0.5">✓</span>
+                    <div>
+                        <div class="font-medium">A GitHub account</div>
+                        <div class="text-gray-500">For Cloud deployment</div>
+                    </div>
+                </div>
+                <div class="flex items-start gap-2">
+                    <span class="text-green-500 mt-0.5">✓</span>
+                    <div>
+                        <div class="font-medium">Claude Code (optional)</div>
+                        <div class="text-gray-500">For AI-assisted building</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps -->
+    <section class="max-w-4xl mx-auto px-6 pb-20">
+
+        <!-- Step 1 -->
+        <div class="relative pl-16 pb-12">
+            <div class="absolute left-0 top-0 w-12 h-12 bg-[#FF2D20] rounded-full flex items-center justify-center text-white font-bold text-lg">1</div>
+            <div class="step-line"></div>
+            <h2 class="text-2xl font-bold mb-2 pt-2">Install Laravel</h2>
+            <p class="text-gray-500 mb-4">One command installs PHP, Composer, and the Laravel installer on any platform.</p>
+            <div class="code-block rounded-xl p-6 mb-4">
+                <div class="font-mono text-sm">
+                    <p class="text-gray-500"># macOS</p>
+                    <p class="text-green-400 mb-3">/bin/bash -c "$(curl -fsSL https://php.new/install/mac)"</p>
+                    <p class="text-gray-500"># Windows</p>
+                    <p class="text-green-400 mb-3">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://php.new/install/windows'))</p>
+                    <p class="text-gray-500"># Linux</p>
+                    <p class="text-green-400">/bin/bash -c "$(curl -fsSL https://php.new/install/linux)"</p>
+                </div>
+            </div>
+            <p class="text-gray-400 text-sm">Already have PHP? Skip ahead — just make sure you have Composer installed.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative pl-16 pb-12">
+            <div class="absolute left-0 top-0 w-12 h-12 bg-[#FF2D20] rounded-full flex items-center justify-center text-white font-bold text-lg">2</div>
+            <div class="step-line"></div>
+            <h2 class="text-2xl font-bold mb-2 pt-2">Create your app</h2>
+            <p class="text-gray-500 mb-4">The Laravel installer asks a few questions and scaffolds everything — auth, database, testing framework.</p>
+            <div class="code-block rounded-xl p-6 mb-4">
+                <div class="font-mono text-sm">
+                    <p class="text-green-400 mb-3">laravel new my-app</p>
+                    <p class="text-gray-400">  ┌ Which starter kit would you like to install?</p>
+                    <p class="text-white">  │ › Breeze</p>
+                    <p class="text-gray-400">  ┌ Which stack would you like?</p>
+                    <p class="text-white">  │ › Blade</p>
+                    <p class="text-gray-400">  ┌ Which database will your application use?</p>
+                    <p class="text-white">  │ › SQLite</p>
+                    <p class="text-gray-400">  ┌ Which testing framework do you prefer?</p>
+                    <p class="text-white">  │ › Pest</p>
+                </div>
+            </div>
+            <p class="text-gray-500 text-sm">You now have a working app with login, registration, password reset, and a database — ready to build on.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative pl-16 pb-12">
+            <div class="absolute left-0 top-0 w-12 h-12 bg-[#FF2D20] rounded-full flex items-center justify-center text-white font-bold text-lg">3</div>
+            <div class="step-line"></div>
+            <h2 class="text-2xl font-bold mb-2 pt-2">Supercharge with Boost</h2>
+            <p class="text-gray-500 mb-4">Install Laravel Boost to give your AI agent deep knowledge of Laravel conventions, best practices, and your project structure.</p>
+            <div class="code-block rounded-xl p-6 mb-4">
+                <div class="font-mono text-sm">
+                    <p class="text-green-400 mb-1">composer require laravel/boost --dev</p>
+                    <p class="text-green-400">php artisan boost:install</p>
+                </div>
+            </div>
+            <p class="text-gray-500 text-sm">Boost sets up an MCP server, AI guidelines, and agent skills. Claude Code, Cursor, and Codex will now write better Laravel code — automatically.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="relative pl-16 pb-12">
+            <div class="absolute left-0 top-0 w-12 h-12 bg-[#FF2D20] rounded-full flex items-center justify-center text-white font-bold text-lg">4</div>
+            <div class="step-line"></div>
+            <h2 class="text-2xl font-bold mb-2 pt-2">Build with AI</h2>
+            <p class="text-gray-500 mb-4">Open Claude Code in your project directory and describe what you want. Laravel's conventions mean the AI always knows where things go.</p>
+            <div class="code-block rounded-xl p-6 mb-4">
+                <div class="font-mono text-sm">
+                    <p class="text-gray-400 mb-2">~ $ <span class="text-blue-400">claude</span></p>
+                    <div class="bg-white/5 rounded-lg p-4 border border-white/10">
+                        <p class="text-yellow-300 text-xs uppercase tracking-wider mb-2">👤 Your prompt:</p>
+                        <p class="text-white mb-1">Add a contact form with name, email, and message fields.</p>
+                        <p class="text-gray-400">Store submissions in the database and send me an email</p>
+                        <p class="text-gray-400">notification when someone submits.</p>
+                    </div>
+                    <p class="text-green-400 mt-4 mb-1">✓ Created ContactController with store method</p>
+                    <p class="text-green-400 mb-1">✓ Added migration for contact_submissions table</p>
+                    <p class="text-green-400 mb-1">✓ Built Blade form with validation</p>
+                    <p class="text-green-400 mb-1">✓ Set up ContactSubmitted Mailable + notification</p>
+                    <p class="text-green-400">✓ Added route, ran migration</p>
+                </div>
+            </div>
+            <div class="bg-blue-50 rounded-lg p-4 text-sm">
+                <p class="text-blue-800"><strong>Tip:</strong> With Boost installed, your AI agent can query the Laravel documentation MCP server for the latest API details — no guessing, no hallucinating outdated syntax.</p>
+            </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="relative pl-16 pb-12">
+            <div class="absolute left-0 top-0 w-12 h-12 bg-[#FF2D20] rounded-full flex items-center justify-center text-white font-bold text-lg">5</div>
+            <div class="step-line"></div>
+            <h2 class="text-2xl font-bold mb-2 pt-2">Test locally</h2>
+            <p class="text-gray-500 mb-4">Make sure everything works before deploying.</p>
+            <div class="code-block rounded-xl p-6 mb-4">
+                <div class="font-mono text-sm">
+                    <p class="text-green-400 mb-1">php artisan serve</p>
+                    <p class="text-gray-400 mt-2">INFO  Server running on [http://127.0.0.1:8000]</p>
+                </div>
+            </div>
+            <p class="text-gray-500 text-sm">Open <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">localhost:8000</code> in your browser. Login works. Your features work. You're ready to ship.</p>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="relative pl-16 pb-4">
+            <div class="absolute left-0 top-0 w-12 h-12 bg-[#FF2D20] rounded-full flex items-center justify-center text-white font-bold text-lg">6</div>
+            <h2 class="text-2xl font-bold mb-2 pt-2">Deploy to Laravel Cloud</h2>
+            <p class="text-gray-500 mb-4">Push your code to GitHub, connect it to Laravel Cloud, and deploy. That's it.</p>
+
+            <div class="space-y-6">
+                <!-- 6a: Push to GitHub -->
+                <div>
+                    <h3 class="font-semibold text-sm text-gray-700 mb-2">Push to GitHub</h3>
+                    <div class="code-block rounded-xl p-6">
+                        <div class="font-mono text-sm">
+                            <p class="text-green-400 mb-1">git init && git add -A && git commit -m "Initial commit"</p>
+                            <p class="text-green-400">gh repo create my-app --public --source=. --push</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6b: Create Cloud app -->
+                <div>
+                    <h3 class="font-semibold text-sm text-gray-700 mb-2">Create your Cloud application</h3>
+                    <div class="bg-gray-50 rounded-xl p-6 border">
+                        <ol class="space-y-3 text-sm text-gray-600">
+                            <li class="flex items-start gap-3">
+                                <span class="bg-gray-200 text-gray-600 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold flex-shrink-0">a</span>
+                                <span>Go to <a href="https://cloud.laravel.com" class="text-[#FF2D20] hover:underline font-medium">cloud.laravel.com</a> and click <strong>+ New Application</strong></span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="bg-gray-200 text-gray-600 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold flex-shrink-0">b</span>
+                                <span><strong>Connect GitHub</strong> — authorize Laravel Cloud to access your repositories</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="bg-gray-200 text-gray-600 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold flex-shrink-0">c</span>
+                                <span><strong>Select your repo</strong>, name your app, and choose a region</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="bg-gray-200 text-gray-600 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold flex-shrink-0">d</span>
+                                <span>Click <strong>Create Application</strong> — your environment is provisioned automatically</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="bg-gray-200 text-gray-600 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold flex-shrink-0">e</span>
+                                <span>Add any environment variables or a database from the infrastructure canvas, then hit <strong>Deploy</strong></span>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 6c: You're live -->
+                <div class="bg-green-50 border border-green-200 rounded-xl p-6 text-center">
+                    <div class="text-3xl mb-2">🚀</div>
+                    <h3 class="font-bold text-green-800 text-lg mb-1">You're live.</h3>
+                    <p class="text-green-700 text-sm">Your app is deployed with SSL, CDN, and auto-scaling. Push to your main branch and Cloud redeploys automatically.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- What's next -->
+    <section class="bg-gray-50 py-16 border-t">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-2xl font-bold mb-8 text-center">What's next?</h2>
+            <div class="grid sm:grid-cols-3 gap-6">
+                <a href="https://laravel.com/docs/12.x/boost" class="bg-white rounded-xl p-6 border hover:shadow-md transition block">
+                    <div class="text-2xl mb-3">⚡</div>
+                    <h3 class="font-bold mb-1">Install Boost</h3>
+                    <p class="text-gray-500 text-sm">AI guidelines and agent skills for better code generation.</p>
+                </a>
+                <a href="https://laravel.com/docs/12.x/mcp" class="bg-white rounded-xl p-6 border hover:shadow-md transition block">
+                    <div class="text-2xl mb-3">🔌</div>
+                    <h3 class="font-bold mb-1">Build an MCP Server</h3>
+                    <p class="text-gray-500 text-sm">Let AI clients interact with your app through Model Context Protocol.</p>
+                </a>
+                <a href="https://cloud.laravel.com/docs" class="bg-white rounded-xl p-6 border hover:shadow-md transition block">
+                    <div class="text-2xl mb-3">☁️</div>
+                    <h3 class="font-bold mb-1">Cloud Docs</h3>
+                    <p class="text-gray-500 text-sm">Databases, domains, scaling, WebSockets, object storage, and more.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to build?</h2>
+            <p class="text-gray-500 mb-8">From <code class="bg-gray-100 px-2 py-1 rounded text-sm">laravel new</code> to production in 15 minutes.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://cloud.laravel.com" class="inline-flex items-center px-8 py-3.5 bg-[#FF2D20] text-white font-semibold rounded-lg hover:bg-red-600 transition text-lg">
+                    Try Laravel Cloud →
+                </a>
+                <a href="https://laravel.com/docs" class="inline-flex items-center px-8 py-3.5 border-2 border-gray-200 text-gray-700 font-semibold rounded-lg hover:border-gray-300 transition text-lg">
+                    Read the Docs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t py-8">
+        <div class="max-w-4xl mx-auto px-6 text-center text-gray-400 text-sm">
+            Laravel is a trademark of Taylor Otwell. Built with Laravel + AI.
+        </div>
+    </footer>
+
+</body>
+</html>
