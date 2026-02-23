@@ -135,25 +135,107 @@
             <div class="absolute left-0 top-0 w-12 h-12 bg-[#FF2D20] rounded-full flex items-center justify-center text-white font-bold text-lg">4</div>
             <div class="step-line"></div>
             <h2 class="text-2xl font-bold mb-2 pt-2">Build with AI</h2>
-            <p class="text-gray-500 mb-4">Open Claude Code in your project directory and describe what you want. Laravel's conventions mean the AI always knows where things go.</p>
-            <div class="code-block rounded-xl p-6 mb-4">
+            <p class="text-gray-500 mb-6">Open Claude Code in your project directory and start describing features. Here's how you'd build a real household management app — prompt by prompt.</p>
+
+            <p class="text-gray-400 font-mono text-sm mb-4">~ $ <span class="text-blue-400">claude</span></p>
+
+            <!-- Prompt 1: Data model -->
+            <div class="code-block rounded-xl p-6 mb-3">
                 <div class="font-mono text-sm">
-                    <p class="text-gray-400 mb-2">~ $ <span class="text-blue-400">claude</span></p>
-                    <div class="bg-white/5 rounded-lg p-4 border border-white/10">
-                        <p class="text-yellow-300 text-xs uppercase tracking-wider mb-2">👤 Your prompt:</p>
-                        <p class="text-white mb-1">Add a contact form with name, email, and message fields.</p>
-                        <p class="text-gray-400">Store submissions in the database and send me an email</p>
-                        <p class="text-gray-400">notification when someone submits.</p>
+                    <p class="text-yellow-300 text-xs uppercase tracking-wider mb-2">Prompt 1 — Data model</p>
+                    <div class="bg-white/5 rounded-lg p-4 border border-white/10 mb-4">
+                        <p class="text-white">I'm building a household management app called Dwellsmith. Create the core data model:</p>
+                        <p class="text-gray-400 mt-1">- Households (name, address, timezone) — users belong to a household</p>
+                        <p class="text-gray-400">- Rooms (name, household_id) — spaces within the home</p>
+                        <p class="text-gray-400">- Items (name, room_id, category, purchase_date, notes) — things in each room</p>
+                        <p class="text-gray-400">- Chores (name, frequency, assigned_to, last_completed, next_due)</p>
+                        <p class="text-gray-400 mt-1">Use Eloquent relationships. Add factories and seeders with realistic data.</p>
                     </div>
-                    <p class="text-green-400 mt-4 mb-1">✓ Created ContactController with store method</p>
-                    <p class="text-green-400 mb-1">✓ Added migration for contact_submissions table</p>
-                    <p class="text-green-400 mb-1">✓ Built Blade form with validation</p>
-                    <p class="text-green-400 mb-1">✓ Set up ContactSubmitted Mailable + notification</p>
-                    <p class="text-green-400">✓ Added route, ran migration</p>
+                    <p class="text-green-400 mb-1">✓ 4 migrations, 4 models with relationships</p>
+                    <p class="text-green-400 mb-1">✓ Updated User model with household belongsTo</p>
+                    <p class="text-green-400">✓ Seeders: 2 households, 8 rooms, 30 items, 12 chores</p>
                 </div>
             </div>
-            <div class="bg-blue-50 rounded-lg p-4 text-sm">
-                <p class="text-blue-800"><strong>Tip:</strong> With Boost installed, your AI agent can query the Laravel documentation MCP server for the latest API details — no guessing, no hallucinating outdated syntax.</p>
+
+            <!-- Prompt 2: Dashboard -->
+            <div class="code-block rounded-xl p-6 mb-3">
+                <div class="font-mono text-sm">
+                    <p class="text-yellow-300 text-xs uppercase tracking-wider mb-2">Prompt 2 — Dashboard & navigation</p>
+                    <div class="bg-white/5 rounded-lg p-4 border border-white/10 mb-4">
+                        <p class="text-white">Build the main dashboard. After login, users see:</p>
+                        <p class="text-gray-400 mt-1">- Their household name + member count</p>
+                        <p class="text-gray-400">- Chores due today and this week (with "mark done" buttons)</p>
+                        <p class="text-gray-400">- Room-by-room item count summary</p>
+                        <p class="text-gray-400">- Sidebar nav: Dashboard, Rooms, Items, Chores, Settings</p>
+                        <p class="text-gray-400 mt-1">Scope everything to the logged-in user's household.</p>
+                    </div>
+                    <p class="text-green-400 mb-1">✓ DashboardController with household-scoped queries</p>
+                    <p class="text-green-400 mb-1">✓ App layout with sidebar navigation</p>
+                    <p class="text-green-400">✓ Chore completion via POST with date tracking</p>
+                </div>
+            </div>
+
+            <!-- Prompt 3: CRUD -->
+            <div class="code-block rounded-xl p-6 mb-3">
+                <div class="font-mono text-sm">
+                    <p class="text-yellow-300 text-xs uppercase tracking-wider mb-2">Prompt 3 — Full CRUD</p>
+                    <div class="bg-white/5 rounded-lg p-4 border border-white/10 mb-4">
+                        <p class="text-white">Add full CRUD for Rooms and Items. Each room page shows its items.</p>
+                        <p class="text-gray-400 mt-1">- Rooms: create, edit, delete (with confirmation)</p>
+                        <p class="text-gray-400">- Items: create, edit, move between rooms, delete</p>
+                        <p class="text-gray-400">- Items should be filterable by category and searchable by name</p>
+                        <p class="text-gray-400">- Use Form Requests for validation</p>
+                        <p class="text-gray-400">- Add authorization — users can only manage their own household's data</p>
+                    </div>
+                    <p class="text-green-400 mb-1">✓ RoomController + ItemController (resourceful routes)</p>
+                    <p class="text-green-400 mb-1">✓ StoreRoomRequest, UpdateItemRequest with auth</p>
+                    <p class="text-green-400">✓ Policy classes scoping all actions to household</p>
+                </div>
+            </div>
+
+            <!-- Prompt 4: Polish -->
+            <div class="code-block rounded-xl p-6 mb-3">
+                <div class="font-mono text-sm">
+                    <p class="text-yellow-300 text-xs uppercase tracking-wider mb-2">Prompt 4 — Chore scheduling & notifications</p>
+                    <div class="bg-white/5 rounded-lg p-4 border border-white/10 mb-4">
+                        <p class="text-white">Make chores smart:</p>
+                        <p class="text-gray-400 mt-1">- Support frequencies: daily, weekly, biweekly, monthly</p>
+                        <p class="text-gray-400">- Auto-calculate next_due when marked complete</p>
+                        <p class="text-gray-400">- Add an artisan command that sends email reminders for chores due today</p>
+                        <p class="text-gray-400">- Schedule it to run daily at 8am via Laravel's scheduler</p>
+                        <p class="text-gray-400">- Show overdue chores in red on the dashboard</p>
+                    </div>
+                    <p class="text-green-400 mb-1">✓ Chore frequency enum + next_due calculation</p>
+                    <p class="text-green-400 mb-1">✓ SendChoreReminders command + Mailable</p>
+                    <p class="text-green-400">✓ Scheduled in console.php, overdue styling in dashboard</p>
+                </div>
+            </div>
+
+            <!-- Prompt 5: Invite -->
+            <div class="code-block rounded-xl p-6 mb-4">
+                <div class="font-mono text-sm">
+                    <p class="text-yellow-300 text-xs uppercase tracking-wider mb-2">Prompt 5 — Household invites</p>
+                    <div class="bg-white/5 rounded-lg p-4 border border-white/10 mb-4">
+                        <p class="text-white">Add the ability to invite people to your household:</p>
+                        <p class="text-gray-400 mt-1">- Settings page with "Invite Member" form (email)</p>
+                        <p class="text-gray-400">- Generate a signed URL invite link (expires in 7 days)</p>
+                        <p class="text-gray-400">- Send invite via email with the link</p>
+                        <p class="text-gray-400">- Clicking the link registers (or logs in) and joins the household</p>
+                    </div>
+                    <p class="text-green-400 mb-1">✓ Invite model + migration with signed URL token</p>
+                    <p class="text-green-400 mb-1">✓ HouseholdInviteMail with accept link</p>
+                    <p class="text-green-400">✓ InviteController with accept flow + existing user handling</p>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl p-5 border">
+                <div class="flex items-start gap-3">
+                    <span class="text-2xl">💡</span>
+                    <div>
+                        <p class="text-gray-700 text-sm"><strong>That's a real app.</strong> Five prompts got you a multi-user household manager with rooms, items, chores, scheduling, email notifications, and invite links. Each prompt builds on the last because Laravel's conventions mean the AI always knows where things are.</p>
+                        <p class="text-gray-500 text-sm mt-2">With Boost installed, your AI agent queries the Laravel documentation MCP server for the latest APIs — no hallucinating outdated syntax.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
