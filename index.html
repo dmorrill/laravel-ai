@@ -47,12 +47,19 @@
                 <span class="ml-3 text-gray-500 text-sm font-mono">claude code</span>
             </div>
             <div class="font-mono text-sm leading-relaxed">
-                <p class="text-gray-400 mb-3">$</p>
-                <p class="text-white mb-1">I'm building a startup database app. Tech stack:</p>
-                <p class="text-gray-400 mb-1">- Laravel 12 with Breeze for auth (Blade stack)</p>
-                <p class="text-gray-400 mb-1">- Tailwind CSS via CDN, Alpine.js for interactivity</p>
-                <p class="text-gray-400 mb-1">- SQLite for dev</p>
-                <p class="text-gray-400 mb-4">- Start with: company search, saved filters, and a feedback widget</p>
+                <p class="text-gray-400 mb-2">~ $  <span class="text-blue-400">claude</span></p>
+                <p class="text-gray-500 mb-3 text-xs">Claude Code v1.0 — Type your prompt below</p>
+
+                <p class="text-yellow-300 text-xs uppercase tracking-wider mb-2">👤 Your prompt:</p>
+                <div class="bg-white/5 rounded-lg p-4 mb-5 border border-white/10">
+                    <p class="text-white mb-1">I'm building a startup database app. Tech stack:</p>
+                    <p class="text-gray-400 mb-1">- Laravel 12 with Breeze for auth (Blade stack)</p>
+                    <p class="text-gray-400 mb-1">- Tailwind CSS via CDN, Alpine.js for interactivity</p>
+                    <p class="text-gray-400 mb-1">- SQLite for dev</p>
+                    <p class="text-gray-400">- Start with: company search, saved filters, and a feedback widget</p>
+                </div>
+
+                <p class="text-yellow-300 text-xs uppercase tracking-wider mb-2">🤖 Claude Code output:</p>
                 <p class="text-green-400 mb-1">✓ Created migrations for companies, saved_searches, feedback</p>
                 <p class="text-green-400 mb-1">✓ Built CompanyController with search, filters, and pagination</p>
                 <p class="text-green-400 mb-1">✓ Added auth with dashboard, company follows, feedback widget</p>
@@ -112,16 +119,22 @@
             <div class="code-block rounded-2xl p-8">
                 <div class="font-mono text-sm leading-loose">
                     <p class="text-gray-500"># Step 1: Create the app</p>
-                    <p class="text-green-400 mb-4">laravel new myapp</p>
-                    <p class="text-gray-500"># Step 2: Tell your AI what to build</p>
-                    <p class="text-white mb-1">I'm building [your app idea]. Use:</p>
-                    <p class="text-gray-400">- Laravel 12 with Breeze (Blade stack)</p>
-                    <p class="text-gray-400">- Tailwind CSS via CDN (no build step)</p>
-                    <p class="text-gray-400">- Alpine.js via CDN for interactivity</p>
-                    <p class="text-gray-400">- SQLite for development</p>
-                    <p class="text-gray-400 mb-4">- Use artisan make commands for scaffolding</p>
-                    <p class="text-gray-500"># Step 3: Ship it</p>
-                    <p class="text-green-400">php artisan serve</p>
+                    <p class="text-gray-400">~ $ <span class="text-green-400">laravel new myapp</span></p>
+                    <p class="text-gray-500 mb-4 text-xs ml-4">Choose: Breeze → Blade → SQLite → Pest</p>
+
+                    <p class="text-gray-500"># Step 2: Open Claude Code and paste this prompt</p>
+                    <p class="text-gray-400">~ $ <span class="text-blue-400">claude</span></p>
+                    <div class="bg-white/5 rounded p-3 my-2 border border-white/10">
+                        <p class="text-white mb-1">I'm building <span class="text-yellow-300">[your app idea]</span>. Use:</p>
+                        <p class="text-gray-400">- Laravel 12 with Breeze (Blade stack)</p>
+                        <p class="text-gray-400">- Tailwind CSS via CDN (no build step)</p>
+                        <p class="text-gray-400">- Alpine.js via CDN for interactivity</p>
+                        <p class="text-gray-400">- SQLite for development</p>
+                        <p class="text-gray-400">- Use artisan make commands for scaffolding</p>
+                    </div>
+
+                    <p class="text-gray-500 mt-4"># Step 3: Ship it</p>
+                    <p class="text-gray-400">~ $ <span class="text-green-400">php artisan serve</span></p>
                 </div>
             </div>
         </div>
